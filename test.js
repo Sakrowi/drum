@@ -1,11 +1,3 @@
-// var n = document.querySelectorAll(".drum").length;
-// for(var i = 0; i<n; i++){
-//     document.querySelectorAll(".drum")[i].addEventListener("click",function(){
-//         var clickButton = this.innerHTML;
-//         sound(clickButton);
-//         animation(clickButton);
-//     })
-// }
 $(".drum").click(function(){
     var clickButton = this.HTML();
         sound(clickButton);
@@ -15,16 +7,9 @@ document.addEventListener("keypress",function(event){
     sound(event.key);
     animation(event.key);
 })
-// document.keypress(function(event){
-//     sound(event.key);
-//     animation(event.key);
-// })
+
 function sound(key){
     switch(key){
-        case 'w':
-            var w = new Audio("sounds/tom-1.mp3");
-            w.play();
-        break;
         case 'a':
             var a = new Audio("sounds/tom-1.mp3");
             a.play();
@@ -33,13 +18,13 @@ function sound(key){
             var s = new Audio("sounds/tom-2.mp3");
             s.play();
         break;
-        case 'w':
-            var w = new Audio("sounds/tom-3.mp3");
-            w.play();
-        break;
         case 'd':
-            var d = new Audio("sounds/tom-4.mp3");
+            var d = new Audio("sounds/tom-3.mp3");
             d.play();
+        break;
+        case 'f':
+            var w = new Audio("sounds/tom-4.mp3");
+            w.play();
         break;
         case 'j':
             var j = new Audio("sounds/snare.mp3");
